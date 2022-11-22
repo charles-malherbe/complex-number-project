@@ -1,8 +1,8 @@
 //
-// Created by charl on 22/11/2022.
+// Created by Charles MALHERBE and Arthur PERRET on 2022/11/22
 //
 
-#ifndef UNIV_LYON2_PROJECT_1_MATRICE_H
-#define UNIV_LYON2_PROJECT_1_MATRICE_H
+#ifndef MATRICE_H
+#define MATRICE_H
 
-#endif //UNIV_LYON2_PROJECT_1_MATRICE_H
+#endif
