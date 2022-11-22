@@ -1,0 +1,8 @@
+//
+// Created by charl on 22/11/2022.
+//
+
+#ifndef UNIV_LYON2_PROJECT_1_VECTOR_H
+#define UNIV_LYON2_PROJECT_1_VECTOR_H
+
+#endif //UNIV_LYON2_PROJECT_1_VECTOR_H
