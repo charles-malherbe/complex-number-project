@@ -9,9 +9,7 @@
 #include <cmath>
 #include <stdio.h>
 #include <stdlib.h>
-#include <vector>
-
-using namespace std;
+#include "vecteur.h"
 
 class Matrice {
 public:
@@ -23,7 +21,7 @@ public:
     bool checkTriangular(void);
     bool checkSquare(void);
     int determinant(void);
-    Matrice solver(Vector vector);
+    Matrice solver(Vecteur v);
     void print(void);
 private:
     int size;

@@ -8,11 +8,12 @@ INCLUDE = ./include/*
 
 CC = gcc
 CFLAGS = -Wall -g -I$(INCLUDE)
-LDFLAGS = -L$(LIB) -lSDL -lSDL_image -lSDL_ttf -lSDL_mixer -lSDL_gfx -lm
 
 all: $(OBJ)
-	$(CC) -o main $(OBJ) $(LDFLAGS)
+	$(CC) $(CFLAGS) main.c $(OBJ)
 
+$(OBJ): $(SRC)
+	$(CC) -c $(SRC) $(CFLAGS)
 clean:
 	rm -f $(OBJ) main
 

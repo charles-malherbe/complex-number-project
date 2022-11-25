@@ -73,10 +73,10 @@ int Matrice::determinant(void) {
     return result;
 }
 
-Matrice Matrice::solver(Vector vector) {
+Matrice Matrice::solver(Vecteur v) {
     Matrice result(this->size);
     for (int i = 0; i < this->size; i++) {
-        result.setValue(i, 0, vector.getValue(i)/this->value[i][i]);
+        result.setValue(i, 0, v.getValue(i)/this->value[i][i]);
     }
     return result;
 }
@@ -84,8 +84,8 @@ Matrice Matrice::solver(Vector vector) {
 void Matrice::print(void) {
     for (int i = 0; i < this->size; i++) {
         for (int j = 0; j < this->size; j++) {
-            cout << this->value[i][j] << " ";
+            std::cout << this->value[i][j] << " ";
         }
-        cout << endl;
+        std::cout << std::endl;
     }
 }
