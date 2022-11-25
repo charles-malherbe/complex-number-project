@@ -1,0 +1,19 @@
+##
+## Created by Charles MALHERBE and Arthur PERRET on 2022/11/22
+##
+
+SRC = ./src/*
+OBJ = ./obj/*
+INCLUDE = ./include/*
+
+CC = gcc
+CFLAGS = -Wall -g -I$(INCLUDE)
+LDFLAGS = -L$(LIB) -lSDL -lSDL_image -lSDL_ttf -lSDL_mixer -lSDL_gfx -lm
+
+all: $(OBJ)
+	$(CC) -o main $(OBJ) $(LDFLAGS)
+
+clean:
+	rm -f $(OBJ) main
+
+.PHONY: clean
