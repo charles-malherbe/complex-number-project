@@ -4,6 +4,11 @@
 
 #include "../include/matrice.h"
 
+/**
+ * @brief Construct a new Matrix
+ *
+ * @param size
+ */
 Matrice::Matrice(int size) {
     this->size = size;
     this->value = new int*[size];
@@ -12,6 +17,10 @@ Matrice::Matrice(int size) {
     }
 }
 
+/**
+ * @brief Destroy the matrix
+ *
+ */
 Matrice::~Matrice(void) {
     for (int i = 0; i < this->size; i++) {
         delete[] this->value[i];
@@ -19,18 +28,41 @@ Matrice::~Matrice(void) {
     delete[] this->value;
 }
 
+/**
+ * @brief Get the size matrix
+ *
+ * @return int
+ */
 int Matrice::getSize(void) {
     return this->size;
 }
 
+/**
+ * @brief Get the Value object
+ *
+ * @param i
+ * @param j
+ * @return int
+ */
 int Matrice::getValue(int i, int j) {
     return this->value[i][j];
 }
 
+/**
+ * @brief Set the Value object
+ *
+ * @param i
+ * @param j
+ * @param value
+ */
 void Matrice::setValue(int i, int j, int value) {
     this->value[i][j] = value;
 }
 
+/**
+ * @brief Check if matrix is a triangular
+ *
+ */
 bool Matrice::checkTriangular(void) {
     for (int i = 0; i < this->size; i++) {
         for (int j = 0; j < this->size; j++) {
@@ -42,6 +74,10 @@ bool Matrice::checkTriangular(void) {
     return true;
 }
 
+/**
+ * @brief Check if matrix is a square
+ *
+ */
 bool Matrice::checkSquare(void) {
     if (this->size%2 == 0)
         return true;
@@ -49,6 +85,10 @@ bool Matrice::checkSquare(void) {
         return false;
 }
 
+/**
+ * @brief Find determinant of a matrix
+ *
+ */
 int Matrice::determinant(void) {
     int result = 0;
     if (this->size == 1) {
@@ -73,6 +113,10 @@ int Matrice::determinant(void) {
     return result;
 }
 
+/**
+ * @brief Solve linear equation
+ *
+ */
 Matrice Matrice::solver(Vecteur v) {
     Matrice result(this->size);
     for (int i = 0; i < this->size; i++) {
@@ -81,6 +125,10 @@ Matrice Matrice::solver(Vecteur v) {
     return result;
 }
 
+/**
+ * @brief Print the matrix
+ *
+ */
 void Matrice::print(void) {
     for (int i = 0; i < this->size; i++) {
         for (int j = 0; j < this->size; j++) {
